@@ -1,0 +1,48 @@
+using System;
+
+namespace Methoden_Projekt
+{
+    public static class Global
+    {
+        public static string Player1, Player2;
+    }
+    class Program
+    {
+        static string Anmeldung1(string a)
+        {
+            //Spieleinführung
+            Console.WriteLine("Dies ist ein Hangman-Spiel! Es befindet sich noch in der BETA Phase und funktioniert aktuell nach der |ANMELDUNG| nur mit Kleinbuchstaben ");
+            // Anmeldung zum Spiel 
+            Console.WriteLine("|ANMELDUNG|");
+            Console.WriteLine("Spieler1:"); a = Console.ReadLine();
+            
+            return a;
+        }
+        static string Anmeldung2(string b)
+        {
+            Console.WriteLine("Spieler2:"); b = Console.ReadLine();
+            return b;
+        }
+        static string WortEingabe(string a)
+        {
+            // Wort von Player1 wird initialisiert und die BuchstabenZahl in einer Variablen gespeichert
+            Console.WriteLine($"{Global.Player1} ist als erstes am Zug! Gib dein Wort ein :");
+            a = Console.ReadLine();
+            return a;
+        }
+        static void Main(string[] args)
+        {
+            Global.Player1 = "";
+            Global.Player2 = "";
+
+            Global.Player1 = Anmeldung1(Global.Player1);
+            Global.Player2 = Anmeldung2(Global.Player2);
+
+            
+
+        }
+            
+        
+    }
+
+}
